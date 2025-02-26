@@ -1,0 +1,19 @@
+{
+    "terminal.integrated.defaultProfile.windows": "bash",
+    "terminal.integrated.profiles.windows": {
+        "bash": {
+            "path": [
+                "${workspaceFolder}/tools/busybox.exe"
+            ],
+            "args": [
+                "bash"
+            ],
+            "overrideName": true,
+            "env": {
+                "PATH": "${workspaceFolder}/tools;${env:PATH}"
+            },
+            "icon": "terminal-bash",
+            "color": "terminal.ansiGreen"
+        }
+    }
+}

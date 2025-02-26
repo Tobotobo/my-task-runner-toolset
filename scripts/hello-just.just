@@ -1,2 +1,2 @@
 hello-just:
-    echo 'Hello Just!'
+  echo 'Hello Just!'

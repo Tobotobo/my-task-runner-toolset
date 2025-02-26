@@ -3,7 +3,7 @@
 ## 概要
 * ※途中（以下はやりたいと思ってるだけ）
 * タスクランナーに Just を用いる
-* Windows でも Linux でも bash を使えるようにする
+* Windows でも Linux でも ash を使えるようにする
 * Shell スクリプトを使えるようにする
 * JavaScript を使えるようにする
 * エラーが起きたら止まるようにする（後続処理を実行しない）
@@ -34,4 +34,3 @@ Hello Just!
 $ qjs ./scripts/qjs-shell-example.js
 あいうえお
 ```
-

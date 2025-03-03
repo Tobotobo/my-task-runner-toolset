@@ -1,6 +1,6 @@
 [script]
 hello-script:
-  {{script-init}}
+  {{SCRIPT_INIT}}
   name="Script"
   echo "Hello ${name}!"
   

@@ -6,21 +6,15 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
-  "terminal.integrated.env.windows": {
-    "PATH": "${workspaceFolder}/tools;${env:PATH}",
-  },
-  "terminal.integrated.env.linux": {
-    "PATH": "${workspaceFolder}/tools:${env:PATH}",
-  },
-  "terminal.integrated.defaultProfile.windows": "ash",
-  // "terminal.integrated.defaultProfile.linux": "ash", // 入力時にマルチバイト文字が?に文字化けするためコメントアウト
+  "terminal.integrated.defaultProfile.windows": "dev-shell",
+  "terminal.integrated.defaultProfile.linux": "dev-shell",
   "terminal.integrated.profiles.windows": {
-    "ash": {
+    "dev-shell": {
       "path": [
-        "${workspaceFolder}/tools/busybox.exe"
+        "powershell"
       ],
       "args": [
-        "ash"
+        "${workspaceFolder}/dev-shell.bat"
       ],
       "overrideName": true,
       "env": {},
@@ -29,13 +23,12 @@
     }
   },
   "terminal.integrated.profiles.linux": {
-    "ash": {
+    "dev-shell": {
       "path": [
-        "sh"
+        "/bin/sh"
       ],
       "args": [
-        "-c",
-        "${workspaceFolder}/tools/busybox ash"
+        "${workspaceFolder}/dev-shell.sh"
       ],
       "overrideName": true,
       "env": {},

@@ -3,7 +3,7 @@ qjs-version-range := ">=0.8.0"
 # タスク一覧から選択して実行（デフォルト）
 [group('task')]
 task-choose:
-  @just --choose --chooser "fzf --with-shell='busybox ash -uc' --style full --preview 'just --unstable --color always --show {}'"
+  @just --choose --chooser "fzf --height=~20 --with-shell='busybox ash -uc' --style full --preview 'just --unstable --color always --show {}'"
 
 # タスク選択を終了
 [group('task')]

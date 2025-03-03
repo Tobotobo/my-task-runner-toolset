@@ -1,5 +1,9 @@
 # my-task-runner-toolset
 
+## TODO
+* busybox ash aaa.sh →　マルチバイト文字が文字化け
+* BusyBox の使用はやめて、Git-Bash に変更する　※こっちは文字化けしないので 
+
 ## 概要
 * タスクランナーに Just を用いる
 * Windows でも ~~Linux でも~~ ash を使えるようにする  

@@ -29,7 +29,7 @@
   "terminal.integrated.profiles.linux": {
     "dev-shell": {
       "path": [
-        "/bin/sh"
+        "bash"
       ],
       "args": [
         "${workspaceFolder}/dev-shell.sh"

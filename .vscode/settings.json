@@ -6,6 +6,10 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
+  "[bat]": {
+    "files.encoding": "shiftjis",
+    "files.eol": "\r\n",
+  },
   "terminal.integrated.defaultProfile.windows": "dev-shell",
   "terminal.integrated.defaultProfile.linux": "dev-shell",
   "terminal.integrated.profiles.windows": {

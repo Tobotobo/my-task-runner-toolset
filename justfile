@@ -14,6 +14,8 @@ task-choose:
 [group('task')]
 task-list:
   @just --list --unsorted --list-heading $'タスク一覧:\n'
+alias list := task-list
+alias ls := task-list
 
 # 必要なツールが揃っているかと、そのバージョンの確認
 [group('tool')]
@@ -41,9 +43,10 @@ set unstable
 # set quiet
 set dotenv-load
 # set dotenv-required
-set windows-shell := [ "busybox", "ash", "-uc"]
-set shell := ["busybox", "ash", "-uc"]
-set script-interpreter := ["busybox", "ash"]
+# set windows-shell := [ "busybox", "ash", "-uc"]
+# set shell := ["busybox", "ash", "-uc"]
+# set shell := ["busybox", "ash", "-uc"]
+# set script-interpreter := ["busybox", "ash"]
 SCRIPT_INIT := """
   set -eEuo pipefail 
   # set -eEuxo pipefail

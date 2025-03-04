@@ -22,8 +22,6 @@ alias ls := task-list
 tool-check:
   just --version
   @{{satisfies}} "`just --version`" ">=1.39.0"
-  busybox | grep 'BusyBox v'
-  @{{satisfies}} "`busybox | grep 'BusyBox v'`" ">=1.37.0 <2.0.0"
   qjs --help | grep version
   @{{satisfies}} "`qjs --help | grep version`" "{{qjs-version-range}}"
   fzf --version
@@ -42,11 +40,9 @@ hello-qjs:
 set unstable
 # set quiet
 set dotenv-load
-# set dotenv-required
-# set windows-shell := [ "busybox", "ash", "-uc"]
-# set shell := ["busybox", "ash", "-uc"]
-# set shell := ["busybox", "ash", "-uc"]
-# set script-interpreter := ["busybox", "ash"]
+# set windows-shell := [ "bash", "-uc"]
+set shell := ["bash", "-uc"]
+set script-interpreter := ["bash"]
 SCRIPT_INIT := """
   set -eEuo pipefail 
   # set -eEuxo pipefail

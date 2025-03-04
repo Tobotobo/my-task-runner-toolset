@@ -40,9 +40,9 @@ hello-qjs:
 set unstable
 # set quiet
 set dotenv-load
-# set windows-shell := [ "bash", "-uc"]
-set shell := ["bash", "-uc"]
-set script-interpreter := ["bash"]
+# set windows-shell := [ x"${BASH}", "-uc"]
+set shell := [x"${BASH}", "-uc", ]
+set script-interpreter := [x"${BASH}"]
 SCRIPT_INIT := """
   set -eEuo pipefail 
   # set -eEuxo pipefail

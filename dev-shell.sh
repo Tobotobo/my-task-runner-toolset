@@ -20,12 +20,10 @@ script_file_name="$(basename "${BASH_SOURCE[0]}")"
 trap 'cd "${initial_dir_path}"' EXIT
 # このスクリプトがあるフォルダにカレントディレクトリを設定
 cd "${script_dir_path}"
-# # .env ファイルが存在する場合は読込み
-# if [[ -f ".env" ]]; then
-#     set -a
-#     source .env
-#     set +a
-# fi
+# .env ファイルが存在する場合は読込み
+if [[ -f ".env" ]]; then
+    source .env
+fi
 
 ############################################################
 
@@ -38,11 +36,17 @@ fi
 # tools フォルダへのパス
 export TOOLS=${script_dir_path}/tools
 
-# OS 判定
+# OS 個別処理
 if [[ "$(uname -s)" == "Linux" ]]; then
-    export TOOLS_OS=linux
+    export TOOLS_OS=Linux
+    export BASH=bash
 else
     export TOOLS_OS=windows
+    if [ -z "${BASH}" ]; then
+        export BASH=C:/Program Files/Git/bin/bash.exe
+    else
+        export BASH=${BASH}
+    fi
 fi
 
 # PATH に追加
@@ -51,4 +55,4 @@ export PATH=${TOOLS}:${TOOLS}/${TOOLS_OS}:${PATH}
 # dev-shell で起動済みフラグを立てる
 export DEV_SHELL=1
 
-bash --rcfile "${TOOLS}/.bashrc"
+"${BASH}" --rcfile "${TOOLS}/.bashrc"

@@ -32,7 +32,7 @@ tool-check:
 import "./scripts/hello-just.just"
 import "./scripts/hello-script.just"
 
-[script("./tools/qjs")]
+[script("qjs")]
 hello-qjs:
   const name = 'QuickJS';
   console.log(`Hello ${name}`);

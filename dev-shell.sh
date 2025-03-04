@@ -38,7 +38,7 @@ export TOOLS=${script_dir_path}/tools
 
 # OS 個別処理
 if [[ "$(uname -s)" == "Linux" ]]; then
-    export TOOLS_OS=Linux
+    export TOOLS_OS=linux
     export BASH=bash
 else
     export TOOLS_OS=windows
